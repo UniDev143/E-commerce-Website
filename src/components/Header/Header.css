@@ -1,0 +1,235 @@
+.main-header {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  font-family: Arial, sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header-top,
+.header-bottom {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 32px 8px 32px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand-logo {
+  width: 250px;
+  height: 50px;
+  margin-right: 8px;
+}
+
+
+
+.search-bar {
+  display: flex;
+  
+  align-items: center;
+  flex: 1;
+  max-width: 500px;
+  margin: 0 32px;
+}
+
+.search-bar input {
+    background-color: white;
+    color: black;
+  flex: 1;
+  padding: 8px 12px;
+  border: 3px solid #4094f7;
+  border-radius: 6px 0 0 6px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.category-select {
+  padding: 8px 12px;
+  border: 2px solid #4094f7;
+  border-left: none;
+    border-radius: 0;
+  background: #fff;
+  font-size: 1rem;
+  color: #000;
+}
+
+.search-bar button {
+  padding: 8px 20px;
+  background: #4094f7;
+  color: #fff;
+  border: 3px solid #4094f7;
+  border-left: none;
+  border-radius: 0 6px 6px 0;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: -1px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.search-bar button:hover {
+  background: #2563eb;
+  transform: scale(1.07);
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.95rem;
+  color: #555;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  user-select: none;
+}
+
+.icon-item:hover {
+  background: #e6f0fd;
+  color: #2563eb;
+  transform: translateY(-2px) scale(1.08);
+  box-shadow: 0 2px 8px rgba(64,148,247,0.08);
+}
+
+.icon {
+  font-size: 1.3rem;
+  margin-bottom: 2px;
+}
+
+/* Placeholder icons using emoji for demo */
+.icon.user::before { content: "👤"; }
+.icon.message::before { content: "💬"; }
+.icon.heart::before { content: "❤️"; }
+.icon.cart::before { content: "🛒"; }
+
+.header-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 32px;
+  font-size: 1rem;
+  background: #fff;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  color: #333;
+}
+
+.nav-link {
+  cursor: pointer;
+  transition: color 0.2s, font-weight 0.2s;
+  font-weight: 400;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.nav-link.active {
+  font-weight: 700;
+  color: #111;
+  background: #e6f0fd;
+}
+
+.menu-icon {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.header-options {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  color: #333;
+  position: relative;
+}
+
+.currency-dropdown,
+.country-dropdown {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.currency-selected,
+.country-selected {
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background 0.2s;
+  display: inline-block;
+}
+
+.currency-dropdown:hover .currency-selected,
+.country-dropdown:hover .country-selected {
+  background: #e6f0fd;
+}
+
+.currency-list,
+.country-list {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  background: #fff;
+  border: 1px solid #4094f7;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(64,148,247,0.08);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-width: 140px;
+  z-index: 10;
+}
+
+.currency-list li,
+.country-list li {
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: flex-start;
+}
+
+.currency-list li:hover,
+.country-list li:hover {
+  background: #e6f0fd;
+  color: #2563eb;
+}
+
+.flag {
+  font-size: 1.1rem;
+  margin-left: 4px;
+}
+
+.flag-img {
+  width: 22px;
+  height: 16px;
+  object-fit: cover;
+  border-radius: 3px;
+  margin-left: 4px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+  vertical-align: middle;
+}
+
+/* Add padding-top to your App or main content to prevent it from being hidden under the fixed header */
