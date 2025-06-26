@@ -1,0 +1,125 @@
+.mainpart3-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 32px auto 0 auto;
+  max-width: 1100px;
+}
+
+.mainpart3-section {
+  display: flex;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+.mainpart3-section-left {
+  flex: 1;
+  min-width: 220px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  background-size: cover;
+  background-position: center;
+  padding: 24px 18px;
+  position: relative;
+}
+
+.mainpart3-section-left > div {
+  z-index: 2;
+}
+
+.mainpart3-section-left h3 {
+  color: #222;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.mainpart3-section-left button {
+  background: #fff;
+  color: #4094f7;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 22px;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.mainpart3-section-left button:hover {
+  background: #4094f7;
+  color: #fff;
+}
+
+.mainpart3-section-right {
+  flex: 3;
+  padding: 18px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainpart3-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  width: 100%;
+}
+
+.mainpart3-item {
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 6px 10px 6px;
+  min-width: 120px;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  text-align: center;
+  cursor: pointer;
+}
+
+.mainpart3-item:hover {
+  box-shadow: 0 2px 12px rgba(64,148,247,0.10);
+  border-color: #4094f7;
+}
+
+.mainpart3-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.mainpart3-item div {
+  font-size: 1rem;
+  color: #222;
+  margin-bottom: 2px;
+}
+
+.mainpart3-item span {
+  color: #888;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+@media (max-width: 900px) {
+  .mainpart3-section {
+    flex-direction: column;
+  }
+  .mainpart3-section-left {
+    min-width: unset;
+    padding: 18px 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  .mainpart3-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}

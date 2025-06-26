@@ -1,0 +1,103 @@
+.mobilecard {
+  display: flex;
+  align-items: flex-start;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(60,60,60,0.07);
+  padding: 16px;
+  margin-bottom: 20px;
+  max-width: 800px;
+  min-width: 800px;
+  
+  position: relative;
+}
+.mobilecard-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 18px;
+  background: #f5f5f5;
+}
+.mobilecard-content {
+  flex: 1;
+}
+.mobilecard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.mobilecard-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+  color: #222;
+  max-width: 350px;
+}
+.mobilecard-fav {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+.mobilecard-fav:hover {
+  background: #f0f0f0;
+}
+.mobilecard-price {
+  margin: 6px 0;
+}
+.mobilecard-price-current {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #222;
+  margin-right: 8px;
+}
+.mobilecard-price-old {
+  font-size: 1rem;
+  color: #bbb;
+  text-decoration: line-through;
+}
+.mobilecard-meta {
+  font-size: 0.95rem;
+  color: #888;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.mobilecard-stars {
+  color: #FFA500;
+  margin-right: 2px;
+}
+.mobilecard-rating {
+  color: #f90;
+  margin-right: 4px;
+}
+.mobilecard-orders {
+  margin-right: 4px;
+}
+.mobilecard-shipping {
+  color: #1dbf73;
+  font-weight: 500;
+}
+.mobilecard-desc {
+  color: #444;
+  font-size: 0.97rem;
+  margin-bottom: 6px;
+  margin-top: 2px;
+}
+.mobilecard-details {
+  background: none;
+  border: none;
+  color: #1a73e8;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  font-size: 0.98rem;
+  text-align: left;
+}
+.mobilecard-details:hover {
+  text-decoration: underline;
+}

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom'; // <-- import useLocation
 import './Header.css';
 import logo from '../../assets/Header/logo-colored.png';
 
@@ -10,14 +11,17 @@ import flagIN from '../../assets/Header/india.png';
 import flagPK from '../../assets/Header/Pakistan.png';
 
 
+
 function Header() {
   const [currency, setCurrency] = useState('USD');
   const [currencyDropdownOpen, setCurrencyDropdownOpen] = useState(false);
-
+  
   const [country, setCountry] = useState({ code: 'DE', flag: flagDE, name: 'Germany' });
   const [countryDropdownOpen, setCountryDropdownOpen] = useState(false);
-
+  
   const [activeMenu, setActiveMenu] = useState('All category');
+  const navigate = useNavigate();
+  const location = useLocation(); // <-- get current location
 
   const countries = [
     { code: 'DE', flag: flagDE, name: 'Germany' },
@@ -51,18 +55,36 @@ function Header() {
   const handleProfileClick = () => alert('Profile clicked!');
   const handleMessageClick = () => alert('Message clicked!');
   const handleOrdersClick = () => alert('Orders clicked!');
-  const handleCartClick = () => alert('My cart clicked!');
+  const handleCartClick = () => navigate('/cart'); // <-- updated for navigation
+
+  // Add this handler for category change
+  const handleCategoryChange = (e) => {
+    if (e.target.value === 'electronics') {
+      navigate('/secondpage');
+    } else if (e.target.value === 'all') {
+      navigate('/');
+    }
+  };
+
+  // Determine the dropdown value based on the current route
+  const getCategoryValue = () => {
+    if (location.pathname === '/secondpage') return 'electronics';
+    return 'all';
+  };
 
   return (
-    <header className="main-header">
+   <header className="main-header">
       <div className="header-top">
         <div className="brand">
           <img src={logo} alt="Brand Logo" className="brand-logo" />
-          
         </div>
         <div className="search-bar">
           <input type="text" placeholder="Search" />
-          <select className="category-select">
+          <select
+            className="category-select"
+            onChange={handleCategoryChange}
+            value={getCategoryValue()} // <-- controlled value
+          >
             <option value="all">All category</option>
             <option value="electronics">Electronics</option>
             <option value="fashion">Fashion</option>

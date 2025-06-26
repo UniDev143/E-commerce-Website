@@ -1,0 +1,147 @@
+.secondpage-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f7f8fa;
+}
+
+.secondpage-main {
+  display: flex;
+  flex: 1 1 auto;
+  padding: 32px 0 32px 0;
+  margin-left: 100px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.secondpage-main > .sidebar {
+  /* If your Sidebar component uses a className="sidebar" */
+  margin-top: 80px;
+  margin-right: 32px;
+}
+
+.secondpage-content {
+  flex: 1 1 0;
+  padding: 0 24px;
+  margin-left: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.secondpage-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 32px;
+  color: #222;
+}
+
+.secondpage-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.secondpage-cards.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  align-items: stretch;
+  margin-top: 24px;
+}
+
+.secondpage-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 16px 10px;
+  background-color: white;
+  border-radius: 10%;
+}
+
+.toolbar-items-count {
+  font-size: 15px;
+  color: #222;
+}
+
+.toolbar-verified {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.toolbar-sort {
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background-color: white;
+  color: black;
+  font-size: 14px;
+  color: bl;
+}
+
+.toolbar-view-btn {
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 4px 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s;
+}
+
+.toolbar-view-btn:hover {
+  background: #e0e0e0;
+}
+
+.toolbar-view-btn.active {
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+
+.toolbar-view-group {
+  margin-left: auto;
+  display: flex;
+  gap: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+  .secondpage-main {
+    flex-direction: column;
+    padding: 16px 0;
+  }
+  .secondpage-content {
+    margin-left: 0;
+    padding: 0 8px;
+  }
+  .secondpage-main > .sidebar {
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .secondpage-wrapper {
+    padding: 0;
+  }
+  .secondpage-main {
+    padding: 0;
+    max-width: 100vw;
+  }
+  .secondpage-content {
+    padding: 0 4px;
+  }
+  .secondpage-title {
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+  }
+  .secondpage-cards {
+    gap: 12px;
+  }
+}

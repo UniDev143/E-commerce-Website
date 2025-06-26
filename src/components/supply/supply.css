@@ -1,0 +1,55 @@
+.supply-section {
+  margin: 32px 6px 40px 210px;
+}
+
+.supply-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.supply-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 48px;
+}
+
+.supply-item {
+  display: flex;
+  align-items: center;
+  min-width: 180px;
+  margin-bottom: 8px;
+}
+
+.supply-flag {
+  width: 28px;
+  height: 20px;
+  object-fit: cover;
+  border-radius: 3px;
+  margin-right: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.supply-country {
+  font-size: 1rem;
+  color: #222;
+  font-weight: 500;
+}
+
+.supply-url {
+  font-size: 0.95rem;
+  color: #a0a0a0;
+  margin-top: 2px;
+}
+
+@media (max-width: 900px) {
+  .supply-section {
+    margin: 24px 8px 0 8px;
+  }
+  .supply-grid {
+    gap: 16px 12px;
+  }
+  .supply-item {
+    min-width: 140px;
+  }
+}

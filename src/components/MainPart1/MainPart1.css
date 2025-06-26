@@ -1,0 +1,210 @@
+.mainpart1-container {
+  display: flex;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+  padding: 18px;
+  margin: 130px auto 0 auto; /* Add top margin for space from header */
+  max-width: 1300px;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.mainpart1-left {
+  flex: 1.1;
+  min-width: 160px;
+}
+
+.mainpart1-left ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mainpart1-left li {
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+  font-size: 1rem;
+}
+
+.mainpart1-left li.active,
+.mainpart1-left li:hover {
+  background: #e6f0fd;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.mainpart1-center {
+  flex: 2.5;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-image: url('../../assets/MainPart1/Mask group.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  min-height: 180px;
+  padding: 28px 24px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.mainpart1-banner-text {
+  z-index: 2;
+}
+
+.mainpart1-banner-text span {
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.mainpart1-banner-text h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 8px 0 18px 0;
+  color: #222;
+}
+
+.mainpart1-banner-text button {
+  background: #fff;
+  color: #222;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.mainpart1-banner-text button:hover {
+  background: #4094f7;
+  color: #fff;
+}
+
+.mainpart1-banner-img {
+  width: 180px;
+  height: auto;
+  margin-left: 32px;
+  z-index: 1;
+}
+
+.mainpart1-right {
+  flex: 1.1;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mainpart1-user-card {
+  background: #f5f7fa;
+  border-radius: 10px;
+  padding: 16px 12px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.mainpart1-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #e6f0fd url('https://cdn-icons-png.flaticon.com/512/149/149071.png') center/cover no-repeat;
+  margin-bottom: 8px;
+}
+
+.mainpart1-user-hi {
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 2px;
+  font-size: 1.05rem;
+}
+
+.mainpart1-user-desc {
+  color: #888;
+  font-size: 0.98rem;
+  margin-bottom: 10px;
+}
+
+.mainpart1-join-btn {
+  width: 100%;
+  background: #4094f7;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.mainpart1-join-btn:hover {
+  background: #2563eb;
+}
+
+.mainpart1-login-btn {
+  width: 100%;
+  background: #fff;
+  color: #4094f7;
+  border: 1px solid #4094f7;
+  border-radius: 6px;
+  padding: 8px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.mainpart1-login-btn:hover {
+  background: #e6f0fd;
+  color: #2563eb;
+}
+
+.mainpart1-offer {
+  border-radius: 8px;
+  padding: 14px 10px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.mainpart1-offer.orange {
+  background: #f79009;
+}
+
+.mainpart1-offer.blue {
+  background: #3bb3bd;
+}
+
+@media (max-width: 900px) {
+  .mainpart1-container {
+    flex-direction: column;
+    gap: 16px;
+    padding: 10px;
+  }
+  .mainpart1-center {
+    order: 1;
+  }
+  .mainpart1-left, .mainpart1-right {
+    order: 2;
+    min-width: unset;
+  }
+  .mainpart1-banner-img {
+    display: none;
+  }
+}

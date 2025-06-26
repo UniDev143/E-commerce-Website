@@ -1,0 +1,133 @@
+.askus-banner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-image:
+    linear-gradient(90deg, rgba(64,148,247,0.92) 0%, rgba(64,148,247,0.7) 60%, rgba(64,148,247,0.3) 100%),
+    url('../../assets/AskusBanner.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  padding: 36px 32px;
+  margin: 32px auto 0 auto;
+  max-width: 1100px;
+  min-height: 200px;
+  position: relative;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.askus-left {
+  flex: 1.5;
+  min-width: 260px;
+  margin-right: 32px;
+}
+
+.askus-left h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.askus-left p {
+  font-size: 1rem;
+  color: #e0e0e0;
+  margin-bottom: 0;
+}
+
+.askus-form-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 22px 20px 18px 20px;
+  min-width: 300px;
+  max-width: 340px;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.askus-form-title {
+  font-weight: 600;
+  font-size: 1.08rem;
+  margin-bottom: 12px;
+}
+
+.askus-form-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.askus-form-card label {
+  font-size: 0.98rem;
+  color: #333;
+  margin-bottom: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.askus-form-card input[type="text"],
+.askus-form-card textarea,
+.askus-form-card input[type="number"] {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 1rem;
+  margin-top: 2px;
+  margin-bottom: 0;
+  resize: none;
+}
+
+.askus-form-card textarea {
+  min-height: 48px;
+  max-height: 80px;
+}
+
+.askus-form-row {
+  display: flex;
+  gap: 8px;
+}
+
+.askus-form-card select {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 1rem;
+}
+
+.askus-form-card button {
+  background: #4094f7;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.askus-form-card button:hover {
+  background: #2563eb;
+}
+
+@media (max-width: 900px) {
+  .askus-banner {
+    flex-direction: column;
+    padding: 18px 8px;
+    gap: 18px;
+  }
+  .askus-left {
+    margin-right: 0;
+    margin-bottom: 18px;
+  }
+  .askus-form-card {
+    min-width: unset;
+    max-width: 100%;
+  }
+}

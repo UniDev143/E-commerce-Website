@@ -1,0 +1,108 @@
+.sidebar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 240px;
+  min-height: 100vh;
+  background: #fff;
+  border-right: 1px solid #e5e8ea;
+  padding: 18px 16px 18px 12px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  overflow-y: auto;
+}
+
+.sidebar-section {
+  margin-bottom: 24px;
+}
+
+.sidebar-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.sidebar-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 6px 0;
+}
+
+.sidebar-section ul li {
+  font-size: 0.97rem;
+  color: #444;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sidebar-link {
+  color: #4094f7;
+  font-size: 0.95rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.sidebar-link-btn {
+  background: none;
+  border: none;
+  color: black;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.sidebar-slider {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.sidebar-slider input[type="range"] {
+  width: 48%;
+}
+
+.sidebar-price-inputs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.sidebar-price-inputs input {
+  width: 50%;
+  padding: 4px 6px;
+  border: 1px solid #e5e8ea;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.sidebar-apply-btn {
+  width: 100%;
+  background: #4094f7;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 0;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.stars {
+  color: #f7b500;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    min-height: unset;
+    border-right: none;
+    border-bottom: 1px solid #e5e8ea;
+    padding: 10px 6px;
+  }
+}
